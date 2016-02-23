@@ -1,0 +1,3 @@
+ofxControlPanel
+ofxOpenCv
+ofxXmlSettings
