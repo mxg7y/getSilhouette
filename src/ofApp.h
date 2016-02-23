@@ -4,11 +4,9 @@
 #include "ofxOpenCv.h"
 #include "ofxControlPanel.h"
 #include "BackgroundSubtraction.h"
-#include "vectorField.h"
-#include "particle.h"
 #include "ofFileUtils.h"
 
-class testApp : public ofBaseApp{
+class ofApp : public ofBaseApp{
 	
 public:
 	void setup();
@@ -23,22 +21,5 @@ public:
 	void grabBackgroundEvent(guiCallbackData & data);
 	void drawInputEvent(guiCallbackData & data);
 	void toggleLiveVideoEvent(guiCallbackData & data);
-	
-	ofVideoGrabber vidGrabber;
-	ofVideoPlayer vidPlayer;
-	
-	BackgroundSubtraction bgSub;
-	ofxCvContourFinder contourFinder;
-	
-	int threshold;
-	bool bLearnBakground;
-	
-	ofxControlPanel gui;
-	bool useLiveVideo;
-	bool drawInputVideo;
-	
-	vectorField VF;
-	bool bForceInward;
-	vector <particle> particles;
 };
 
